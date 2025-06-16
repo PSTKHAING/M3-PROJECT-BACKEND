@@ -61,13 +61,39 @@ def CategoryCreate(request):
             'success':False,
             'message': f'Category created failed {str(e)}'
         },status=status.HTTP_400_BAD_REQUEST)
+    
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def CategoryDetail(request,pk):
+    try:
+        category = CategoryModel.objects.get(id=pk)
+        return Response({
+            'success':True,
+            'category':{
+                "id": category.id,
+                "name":category.name,
+                "created_at":category.created_at,
+                "updated_at":category.updated_at
+            }
+        },status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({
+            'success':False,
+            'message': f'Category detail failed {str(e)}'
+        },status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['PUT'])
 @permission_classes([AllowAny])
 def CategoryUpdate(request,pk):
     try:
         category = CategoryModel.objects.get(id=pk)
-        category.name = request.data.get('name')
+        name = request.data.get('name')
+        if name == category.name:
+            return Response({
+                'success':False,
+                'message': 'Nothing was changed',
+            },status=status.HTTP_400_BAD_REQUEST)
+        category.name = name
         category.save()
         return Response({
             'success':True,
@@ -179,6 +205,33 @@ def ProductCreate(request):
         return Response({
             "success" : False,
             "message" : f"Product created failed {str(e)}"
+        },status=status.HTTP_400_BAD_REQUEST)
+    
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def ProductDetail(request,pk):
+    try:
+        product = ProductModel.objects.get(id = pk)
+        return Response({
+            'success' : True,
+            'product' : {
+                "id" : product.id,
+                "name": product.name,
+                "price" : product.price,
+                "image" : product.image.url,
+                "quantity" : product.quantity,
+                "category" : {
+                    "id": product.category_id,
+                    "name" : product.category.name,
+                },
+                "created_at" : product.created_at,
+                "updated_at": product.updated_at
+            }
+        },status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({
+            "success" : False,
+            "message" : f"Product detail failed {str(e)}"
         },status=status.HTTP_400_BAD_REQUEST)
     
 @api_view(['PUT'])
