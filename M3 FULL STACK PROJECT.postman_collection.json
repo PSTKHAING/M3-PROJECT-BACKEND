@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "75b74a7a-5e17-45cb-b214-7671e4760de0",
+		"name": "M3 FULL STACK PROJECT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44749614"
+	},
+	"item": [
+		{
+			"name": "CATEGORY ROUTES",
+			"item": [
+				{
+					"name": "LIST",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNzIwMDUwLCJpYXQiOjE3NDkxMjgwNTAsImp0aSI6IjEyYTIyZjUxNDQxNjRlOTJhZTJlM2Y3MjI5ZmZkYjIzIiwidXNlcl9pZCI6Ijc4Y2FhYmFmLWZiNWYtNGY0ZC04YjRhLTk0MGRlYjZjOTFhNCJ9.wvJdURmb9gWGXJuY4aPrJTKFYLceANuicubdvGzmB_U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL(8000)}}/api/category/list/",
+							"host": [
+								"{{baseURL(8000)}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNzIwMDUwLCJpYXQiOjE3NDkxMjgwNTAsImp0aSI6IjEyYTIyZjUxNDQxNjRlOTJhZTJlM2Y3MjI5ZmZkYjIzIiwidXNlcl9pZCI6Ijc4Y2FhYmFmLWZiNWYtNGY0ZC04YjRhLTk0MGRlYjZjOTFhNCJ9.wvJdURmb9gWGXJuY4aPrJTKFYLceANuicubdvGzmB_U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Category - 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL(8000)}}/api/category/create/",
+							"host": [
+								"{{baseURL(8000)}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNzIwMDUwLCJpYXQiOjE3NDkxMjgwNTAsImp0aSI6IjEyYTIyZjUxNDQxNjRlOTJhZTJlM2Y3MjI5ZmZkYjIzIiwidXNlcl9pZCI6Ijc4Y2FhYmFmLWZiNWYtNGY0ZC04YjRhLTk0MGRlYjZjOTFhNCJ9.wvJdURmb9gWGXJuY4aPrJTKFYLceANuicubdvGzmB_U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Change Name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL(8000)}}/api/category/update/1/",
+							"host": [
+								"{{baseURL(8000)}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"update",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNzIwMDUwLCJpYXQiOjE3NDkxMjgwNTAsImp0aSI6IjEyYTIyZjUxNDQxNjRlOTJhZTJlM2Y3MjI5ZmZkYjIzIiwidXNlcl9pZCI6Ijc4Y2FhYmFmLWZiNWYtNGY0ZC04YjRhLTk0MGRlYjZjOTFhNCJ9.wvJdURmb9gWGXJuY4aPrJTKFYLceANuicubdvGzmB_U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL(8000)}}/api/category/delete/1/",
+							"host": [
+								"{{baseURL(8000)}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"delete",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODUCT ROUTES",
+			"item": [
+				{
+					"name": "LIST",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNzIwMDUwLCJpYXQiOjE3NDkxMjgwNTAsImp0aSI6IjEyYTIyZjUxNDQxNjRlOTJhZTJlM2Y3MjI5ZmZkYjIzIiwidXNlcl9pZCI6Ijc4Y2FhYmFmLWZiNWYtNGY0ZC04YjRhLTk0MGRlYjZjOTFhNCJ9.wvJdURmb9gWGXJuY4aPrJTKFYLceANuicubdvGzmB_U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL(8000)}}/api/product/list/",
+							"host": [
+								"{{baseURL(8000)}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Product - 1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/daniel/Desktop/img/airconmasterapp.png"
+								},
+								{
+									"key": "quantity",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL(8000)}}/api/product/create/",
+							"host": [
+								"{{baseURL(8000)}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNzIwMDUwLCJpYXQiOjE3NDkxMjgwNTAsImp0aSI6IjEyYTIyZjUxNDQxNjRlOTJhZTJlM2Y3MjI5ZmZkYjIzIiwidXNlcl9pZCI6Ijc4Y2FhYmFmLWZiNWYtNGY0ZC04YjRhLTk0MGRlYjZjOTFhNCJ9.wvJdURmb9gWGXJuY4aPrJTKFYLceANuicubdvGzmB_U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Change Name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL(8000)}}/api/product/update/1/",
+							"host": [
+								"{{baseURL(8000)}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"update",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUxNzIwMDUwLCJpYXQiOjE3NDkxMjgwNTAsImp0aSI6IjEyYTIyZjUxNDQxNjRlOTJhZTJlM2Y3MjI5ZmZkYjIzIiwidXNlcl9pZCI6Ijc4Y2FhYmFmLWZiNWYtNGY0ZC04YjRhLTk0MGRlYjZjOTFhNCJ9.wvJdURmb9gWGXJuY4aPrJTKFYLceANuicubdvGzmB_U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL(8000)}}/api/product/delete/1/",
+							"host": [
+								"{{baseURL(8000)}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"delete",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL(8000)",
+			"value": "http://localhost:8000",
+			"type": "default"
+		}
+	]
+}
